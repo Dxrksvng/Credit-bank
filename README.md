@@ -1,4 +1,33 @@
-# 📈 โปรเจกต์วิเคราะห์และทำนายสินเชื่อธนาคาร (Bank Credit Analysis and Prediction)
+<div align="center">
+
+# Bank Credit Analysis and Prediction
+
+**AutoML comparison of credit-risk models to help reduce non-performing loans.**
+
+![Python PyCaret](https://img.shields.io/badge/Python-PyCaret-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Task credit risk](https://img.shields.io/badge/Task-credit_risk-0F766E?style=for-the-badge) ![Notebook Jupyter](https://img.shields.io/badge/Notebook-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+</div>
+
+## Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,pandas,jupyter,sklearn&perline=10" alt="Tech stack" />
+</p>
+
+## Modelling flow
+
+```mermaid
+flowchart LR
+    D[("Bank loan dataset")] --> P["Prepare\nmissing values, cleaning,\nfeature engineering"]
+    P --> S["PyCaret setup\ntarget variable"]
+    S --> C["compare_models()\nLogReg, RF, GBM, LightGBM ..."]
+    C --> B["Best model\nAccuracy, AUC, F1"]
+    B --> T["Hyperparameter tuning"]
+    T --> E["Cross-validation\nConfusion matrix, ROC"]
+```
+
+---
+
 Presentation: [https://canva.link/te3ms6flstxe274](https://canva.link/te3ms6flstxe274)
 ## 📝 ภาพรวม (Overview)
 โปรเจกต์นี้เป็นการสร้างโมเดล Machine Learning เพื่อวิเคราะห์และทำนายความเสี่ยงในการอนุมัติสินเชื่อของลูกค้าธนาคาร โดยมีเป้าหมายเพื่อช่วยลดความเสี่ยงของหนี้ที่ไม่ก่อให้เกิดรายได้ (NPLs) และเพิ่มประสิทธิภาพในกระบวนการพิจารณาสินเชื่อ. โปรเจกต์นี้ใช้ไลบรารี `PyCaret` ซึ่งเป็นเครื่องมือ AutoML (Automated Machine Learning) เพื่อเปรียบเทียบ, คัดเลือก, และปรับจูนโมเดลที่มีประสิทธิภาพสูงสุดโดยอัตโนมัติ.
